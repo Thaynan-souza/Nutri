@@ -8,7 +8,6 @@ let port = 3000;
 
 const RedisStore =require('connect-redis').RedisStore;
 const createClient = require('./DbRedis');
-createClient.connect().catch(console.error);
 
 let expressSession = require('express-session');
 
