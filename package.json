@@ -14,11 +14,14 @@
   "dependencies": {
     "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
+    "connect-redis": "^8.0.1",
     "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
     "express": "^4.21.0",
     "express-session": "^1.18.1",
+    "git": "^0.1.5",
     "mysql2": "^3.11.3",
+    "redis": "^4.7.0",
     "save": "^2.9.0"
   }
 }

@@ -6,6 +6,10 @@ let express = require('express'); // O express retorna uma função
 let app = express(); // express é uma função.
 let port = 3000;
 
+const RedisStore =require('connect-redis').RedisStore;
+const createClient = require('./DbRedis');
+createClient.connect().catch(console.error);
+
 let expressSession = require('express-session');
 
 // Configuração da view engine EJS
