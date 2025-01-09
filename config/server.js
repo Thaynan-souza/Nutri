@@ -4,7 +4,7 @@ dotenv.config();
 
 let express = require('express'); // O express retorna uma função
 let app = express(); // express é uma função.
-let port = 3000;
+let port = process.env.PORT || 3000;
 
 const RedisStore =require('connect-redis').RedisStore;
 const { createClient } = require('./DbRedis');
