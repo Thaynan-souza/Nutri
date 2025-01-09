@@ -1,0 +1,106 @@
+<!DOCTYPE html> <!-- Inicia o documento HTML -->
+<html lang="pt"> <!-- Define o idioma da página como português -->
+
+<head>
+    <meta charset="utf-8" /> <!-- Define a codificação de caracteres como UTF-8 -->
+    <title>Dashboard - Marmitas</title> <!-- Define o título da página -->
+    <link rel="stylesheet" type="text/css" href="./CSS/dashboard.css">
+    <!-- Link para o arquivo CSS da home (mesmo que a home) -->
+</head>
+
+<body>
+    <!-- Barra de navegação (Menu) -->
+    <nav class="navbar">
+        <div class="navbar-container"> <!-- Contêiner para o logo e links -->
+            <ul class="navbar-list"> <!-- Lista de navegação -->
+                <li><a href="/">Home</a></li> <!-- Link para a página inicial -->
+                <li><a href="/dashboard">Dashboard</a></li> <!-- Link para o Dashboard -->
+                <li><a href="#edit">Editar</a></li>
+                <li><a href="/carrinho">Carrinho</a></li>
+                <li><a href="/logout">Sair</a></li> <!-- Link para logout -->
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Conteúdo principal da página -->
+    <div class="container">
+        <h1 class="title">Dashboard - Marmitas</h1> <!-- Título da página -->
+
+        <form id="add" action="/dashboard/incluir" method="POST">
+            <h2>Adicionar Nova Marmita</h2>
+            <div>
+                <label for="sabor">Sabor:</label>
+                <input type="text" id="sabor" name="sabor" required />
+            </div>
+            <div>
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" name="descricao" required></textarea>
+            </div>
+            <div>
+                <label for="preco">Preço:</label>
+                <input type="number" id="preco" name="preco" step="0.01" required />
+            </div>
+            <div>
+                <label for="urlimagem">URL da Imagem:</label>
+                <input type="text" id="urlimagem" name="urlimagem" required />
+            </div>
+            <button type="submit">Adicionar Marmita</button>
+        </form>       
+        <h2>Editar Marmitas</h2>
+
+
+        <!-- Container de marmitas -->
+        <div class="marmitas-container">
+            <% for (let i=0; i < marmitas.length; i++) { %> <!-- Inicia loop para exibir cada marmita -->
+                <div class="marmitas-card"> <!-- Card de cada marmita -->
+                    <div class="card"> <!-- Div que agrupa a imagem e informações da marmita -->
+                        <div class="card-image-container"> <!-- Contêiner da imagem -->
+                            <img src="<%= marmitas[i].urlimagem %>" alt="<%= marmitas[i].sabor %>">
+                            <!-- Imagem da marmita -->
+                        </div>
+                        <div class="card-body"> <!-- Corpo do card -->
+                            <h5 class="card-title"> <!-- Título do card -->
+                                <%= marmitas[i].sabor %> <!-- Exibe o sabor da marmita -->
+                            </h5>
+                        </div>
+                        <!-- Formulário para deletar a marmita -->
+                        <form action="/dashboard/deletar/<%= marmitas[i].id %>" method="post">
+                            <button type="submit" class="delete-button">Deletar</button>
+                            <!-- Botão para deletar a marmita -->
+                        </form><br>                                               
+
+                        <!-- Formulário para editar a marmita -->
+                        <form id="edit" action="/dashboard/atualizar/<%= marmitas[i].id %>" method="post">
+                            <h3>Editar</h3> <!-- Título do formulário de edição -->
+                            <div>
+                                <label for="sabor">Sabor</label> <!-- Rótulo do campo sabor -->
+                                <input type="text" id="sabor" name="sabor" value="<%= marmitas[i].sabor %>" required />
+                                <!-- Campo de entrada para editar o sabor -->
+                            </div>
+                            <div>
+                                <label for="descricao">Descrição</label> <!-- Rótulo do campo descrição -->
+                                <input type="text" id="descricao" name="descricao" value="<%= marmitas[i].descricao %>"
+                                    required /> <!-- Campo de entrada para editar a descrição -->
+                            </div>
+                            <div>
+                                <label for="preco">Preço</label> <!-- Rótulo do campo preço -->
+                                <input type="number" id="preco" name="preco" value="<%= marmitas[i].preco %>"
+                                    required /> <!-- Campo de entrada para editar o preço -->
+                            </div>
+                            <div>
+                                <label for="urlimagem">URL da Imagem</label> <!-- Rótulo do campo URL da imagem -->
+                                <input type="text" id="urlimagem" name="urlimagem" value="<%= marmitas[i].urlimagem %>"
+                                    required /> <!-- Campo de entrada para editar o URL da imagem -->
+                            </div>
+                            <br><button type="submit" class="update-button">Atualizar</button>
+                            <!-- Botão para atualizar os dados da marmita -->
+                             
+                        </form>
+                    </div>
+                </div>
+                <% } %> <!-- Fim do loop -->
+        </div>
+    </div>
+</body>
+
+</html>

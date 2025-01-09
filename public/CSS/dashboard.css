@@ -1,0 +1,196 @@
+/* Estilos Gerais */
+
+/* Corpo da página */
+body {
+    background-color: #35864d;
+    /* Cor de fundo da página */
+    font-family: Arial, sans-serif;
+    /* Fonte usada no texto */
+    text-align: center;
+    /* Alinhamento centralizado de texto */
+    padding: 50px;
+    /* Espaçamento interno de 50px */
+    margin: 0;
+    /* Remove a margem padrão do body */
+}
+
+/* Título da página */
+h1 {
+    color: rgb(246, 235, 34);
+    /* Cor do título */
+    margin-bottom: 20px;
+    /* Espaçamento abaixo do título */
+}
+
+/* Menu de Navegação */
+.navbar {
+    background-color: #333;
+    /* Cor de fundo da barra de navegação */
+    overflow: hidden;
+    /* Garante que o conteúdo não vaze da navbar */
+}
+
+/* Lista dentro da navbar */
+.navbar ul {
+    list-style-type: none;
+    /* Remove os pontos das listas */
+    margin: 0;
+    /* Remove a margem padrão da lista */
+    padding: 0;
+    /* Remove o padding da lista */
+}
+
+/* Itens da lista na navbar */
+.navbar ul li {
+    display: inline;
+    /* Exibe os itens de forma horizontal */
+}
+
+/* Links do menu */
+.navbar ul li a {
+    color: white;
+    /* Cor do texto dos links */
+    padding: 14px 20px;
+    /* Espaçamento interno dos links */
+    text-decoration: none;
+    /* Remove o sublinhado dos links */
+    text-align: center;
+    /* Centraliza o texto dentro do link */
+    display: inline-block;
+    /* Garante que o link se comporte como um bloco */
+}
+
+/* Efeito ao passar o mouse sobre os links */
+.navbar ul li a:hover {
+    background-color: #ddd;
+    /* Cor de fundo quando passar o mouse */
+    color: black;
+    /* Cor do texto quando passar o mouse */
+}
+
+/* Contêiner das Marmitas */
+.marmitas-container {
+    display: flex;
+    /* Usa flexbox para distribuir os itens */
+    flex-wrap: wrap;
+    /* Permite que os itens se ajustem para várias linhas */
+    justify-content: center;
+    /* Centraliza os itens na página */
+    gap: 20px;
+    /* Espaçamento entre os itens */
+    margin-top: 30px;
+    /* Espaço acima do contêiner */
+}
+
+/* Cartões individuais das marmitas */
+.marmitas-card {
+    border: 1px solid #ddd;
+    /* Borda leve ao redor do cartão */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    overflow: hidden;
+    /* Impede que o conteúdo vaze do cartão */
+    width: 250px;
+    /* Largura fixa dos cartões */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra leve para dar profundidade */
+    background: wheat;
+
+}
+
+/* Estrutura interna do cartão */
+.card {
+    display: flex;
+    /* Usa flexbox para organizar o conteúdo internamente */
+    flex-direction: column;
+    /* Organiza os itens em coluna */
+    padding: 20px;
+    /* Espaçamento interno do cartão */
+    background-color: wheat;
+    /* Cor de fundo do cartão */
+}
+
+/* Imagem da marmita dentro do cartão */
+.card-image-container img {
+    width: 100%;
+    /* A imagem ocupa toda a largura do cartão */
+    height: 200px;
+    /* Altura fixa para a imagem */
+    object-fit: cover;
+    /* Faz a imagem preencher o espaço sem distorcer */
+    border-radius: 8px;
+    /* Bordas arredondadas na imagem */
+}
+
+/* Corpo do cartão (onde ficam as informações) */
+.card-body {
+    text-align: left;
+    /* Alinha o texto à esquerda */
+    margin-top: 10px;
+    /* Espaçamento acima do corpo do cartão */
+}
+
+/* Título do cartão (sabor da marmita) */
+.card-title {
+    font-size: 1.2em;
+    /* Tamanho da fonte */
+    font-weight: bold;
+    /* Deixa o título em negrito */
+}
+
+/* Parágrafos no corpo do cartão (descrição e preço) */
+.card-body p {
+    font-size: 1em;
+    /* Tamanho da fonte */
+    margin-bottom: 10px;
+    /* Espaçamento abaixo dos parágrafos */
+}
+
+
+/* Formulário de adição */
+#add {
+    width: 40%;
+    margin: 0 auto;
+    padding: 2.5%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+#add h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#add div {
+    margin-bottom: 15px;
+}
+
+#add input, #add textarea, #add button {
+    width: 95%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#add button {
+    background-color: #35864d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+#add button:hover {
+    background-color: #2c6c3e;
+}
+
+#edit {
+    background-color: #35864d;
+    
+    
+}

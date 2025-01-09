@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Nutriware</title>
+    <!-- Link para o arquivo de estilo CSS -->
+    <link rel="stylesheet" type="text/css" href="./CSS/home.css">
+</head>
+
+<body>
+    <!-- Menu de Navegação -->
+    <div class="navbar">
+        <ul>
+            <!-- Link para a página inicial -->
+            <li><a href="/">Home</a></li>
+            <!-- Link para o dashboard -->
+            <li><a href="/dashboard">Dashboard</a></li> <!-- Link para o Dashboard -->
+            
+            <li><a href="/register">Cadastro</a></li>
+
+            <li><a href="/carrinho">Carrinho</a></li>
+
+            <!-- Link para a página de Login -->
+            <li><a href="/login">Login</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <!-- Título da página -->
+        <h1 class="title">Nutriware</h1>
+
+        <!-- Contêiner para as marmitas -->
+        <div class="marmitas-container">
+            <!-- Loop para iterar sobre as marmitas e exibir suas informações -->
+            <% for (let i=0; i < marmitas.length; i++) { %>
+                <div class="marmitas-card">
+                    <div class="card">
+                        <!-- Contêiner para a imagem da marmita -->
+                        <div class="card-image-container">
+                            <img src="<%= marmitas[i].urlimagem %>" alt="<%= marmitas[i].sabor %>">
+                        </div>
+                        <div class="card-body">
+                            <!-- Título da marmita (sabor) -->
+                            <h5 class="card-title">
+                                <%= marmitas[i].sabor %>
+                            </h5>
+                            <!-- Descrição da marmita -->
+                            <p>
+                                <%= marmitas[i].descricao %>
+                            </p>
+                            <!-- Preço da marmita -->
+                            <p>
+                                R$ <%= marmitas[i].preco.toFixed(2) %>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+/* register.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #35864d;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.navbar {
+    width: 60%;
+    background-color: #333; /* Cor de fundo da barra de navegação */
+    overflow: hidden; /* Garante que o conteúdo não vaze da navbar */
+    padding: 4px;
+    margin-top: 2%;
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove os pontos das listas */
+    margin: 0; /* Remove a margem padrão da lista */
+    padding: 0; /* Remove o padding da lista */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.navbar ul li {
+    display: inline; /* Exibe os itens de forma horizontal */
+}
+
+.navbar ul li a {
+    color: white; /* Cor do texto dos links */
+    padding: 14px 20px; /* Espaçamento interno dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    text-align: center; /* Centraliza o texto dentro do link */
+    display: inline-block; /* Garante que o link se comporte como um bloco */
+}
+
+.navbar ul li a:hover {
+    background-color: #ddd; /* Cor de fundo ao passar o mouse */
+    color: black; /* Cor do texto ao passar o mouse */
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px; /* Espaço entre navbar e formulário */
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px; /* Espaço entre o label e o input */
+    text-align: left;
+    color: #555;
+}
+
+input {
+    width: 95%; /* Ajusta o input para se alinhar melhor ao container */
+    padding: 10px;
+    margin-bottom: 20px; /* Espaço entre os inputs */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+p {
+    margin-top: 15px;
+    color: #666;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
