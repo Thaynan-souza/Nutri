@@ -47,7 +47,7 @@ module.exports = {
                 req.session.user = {
                     id: user.id,
                     email: user.email,
-                    nome: user.nome
+                    nome: user.name
                 };
 
                 console.log('[Session]', req.session.user);
