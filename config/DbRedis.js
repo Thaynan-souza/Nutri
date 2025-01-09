@@ -2,9 +2,7 @@ const redis = require('redis');
 
 require('dotenv').config();
 
-module.exports = () => {
-
-    return redis.createClient({
+module.exports.createClient = () => redis.createClient({
         socket:{
             host: process.env.redis_host,
             port: process.env.redis_port,
@@ -13,5 +11,4 @@ module.exports = () => {
         username: process.env.redis_username,
         password: process.env.redis_password,
         }
-    )
-}
+    );
