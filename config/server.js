@@ -23,6 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Configuração da sessão com variável de ambiente
 app.use(expressSession({
+  store: new RedisStore({ client }),
   secret: process.env.SECRET, // Usando a variável de ambiente SECRET
   resave: false,
   saveUninitialized: false
