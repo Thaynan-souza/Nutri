@@ -7,7 +7,8 @@ let app = express(); // express é uma função.
 let port = 3000;
 
 const RedisStore =require('connect-redis').RedisStore;
-const createClient = require('./DbRedis');
+const { createClient } = require('./DbRedis');
+const client = createClient();
 
 let expressSession = require('express-session');
 
